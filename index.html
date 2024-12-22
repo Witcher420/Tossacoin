@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toss a Coin to Your Witcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1e1e2f;
+            color: white;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        video {
+            margin: 20px 0;
+        }
+        .qr-codes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .qr-codes img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+    <script>
+        function playVideo() {
+            const video = document.querySelector('video');
+            video.play();
+        }
+    </script>
+</head>
+<body onclick="playVideo()">
+    <div class="container">
+        <h1>🎶 Toss a Coin to Your Witcher 🎶</h1>
+        <p>"O valley of plenty!"</p>
+        
+        <!-- Embed the video -->
+        <video width="560" height="315" controls loop>
+            <source src="Tossacoin.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- QR codes displayed side by side -->
+        <div class="qr-codes">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=bitcoin:39EvNKgqocAMxLQ6GRsTGn1QLBUFkhAtVz&size=150x150" alt="QR Code 1">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=dogecoin:DCa9Vfe9UbtgPRYeYehYiQb2ATvDyL18Yj&size=150x150" alt="QR Code 2">
+        </div>
+    </div>
+</body>
+</html>
